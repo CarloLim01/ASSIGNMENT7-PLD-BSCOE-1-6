@@ -8,3 +8,7 @@
 #Consonants: 8
 
 user_sentence = input("Enter a sentence: ")
+
+def words_number():
+    words = len(user_sentence.split())
+    print(f"Number of Words: {words}")
