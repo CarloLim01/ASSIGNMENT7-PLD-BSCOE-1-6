@@ -19,6 +19,9 @@ def password_validator():
     if not any(char.isupper() for char in password):
         print("Have atleast 1 capital letter in your password.")
         val = False   
+    if not any(char.isdigit() for char in password):
+        print("Have atleast 1 number in your password.")
+        val = False
     if not any(char in special_character for char in password):
         print("Have atleast 1 character in your password.")
         val = False
