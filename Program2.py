@@ -8,27 +8,33 @@
 #Input: P@ssw0rd+P@ssw0rd
 #Ouput: Valid
 
-password = input("Enter your password: ")
+print("\033[1;37;1mPASSWORD VALIDATOR\033[0m")
+
+password = input("\n\33[1;32;1mEnter your password\33[0m: ")
 
 def password_validator():
     special_character = ("!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", ".", "|", ";", ":", "'", "?", ",", "/", "<", ">", "~", "`")
     val = True
     if len(password) < 15:
-        print("Have atleast 15 letters in your password.")
+        print("\n\033[1;31;3mHave atleast 15 letters in your password.\33[0m")
         val = False
     if not any(char.isupper() for char in password):
-        print("Have atleast 1 capital letter in your password.")
+        print("\n\033[1;31;3mHave atleast 1 capital letter in your password.\33[0m")
         val = False   
     if not any(char.isdigit() for char in password):
-        print("Have atleast 1 number in your password.")
+        print("\n\033[1;31;3mHave atleast 1 number in your password.\33[0m")
         val = False
     if not any(char in special_character for char in password):
-        print("Have atleast 1 character in your password.")
+        print("\n\033[1;31;3mHave atleast 1 character in your password.\33[0m")
         val = False
     return val
 
 def valid_invalid():
     if (password_validator()):
-        print("The PASSWORD you enter is VALID!")
+        print("\n\033[1;33;1mThe PASSWORD you enter is VALID!\033[0m")
     else:
-        print("The PASSWORD you enter is INVALID!")
+        print("\n\033[1;33;1mThe PASSWORD you enter is INVALID!\033[0m")
+      
+valid_invalid()
+
+print("\n\033[1;37;1m-THANK YOU FOR USING PASSWORD VALIDATOR-\033[0m")
