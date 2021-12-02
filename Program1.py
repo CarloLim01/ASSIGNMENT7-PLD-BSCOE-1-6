@@ -12,3 +12,10 @@ user_sentence = input("Enter a sentence: ")
 def words_number():
     words = len(user_sentence.split())
     print(f"Number of Words: {words}")
+
+def vowels_number():
+    count = 0
+    for num in user_sentence:
+        if (num == "a" or num == "A" or num == "e" or num == "E" or num == "i" or num == "I" or num == "o" or num == "O" or num == "u" or num == "U"):
+            count = count + 1
+    print(f"Number of Vowels: {count}")
