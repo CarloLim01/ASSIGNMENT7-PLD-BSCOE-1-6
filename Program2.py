@@ -26,3 +26,9 @@ def password_validator():
         print("Have atleast 1 character in your password.")
         val = False
     return val
+
+def valid_invalid():
+    if (password_validator()):
+        print("The PASSWORD you enter is VALID!")
+    else:
+        print("The PASSWORD you enter is INVALID!")
