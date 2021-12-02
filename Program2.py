@@ -16,6 +16,9 @@ def password_validator():
     if len(password) < 15:
         print("Have atleast 15 letters in your password.")
         val = False
+    if not any(char.isupper() for char in password):
+        print("Have atleast 1 capital letter in your password.")
+        val = False   
     if not any(char in special_character for char in password):
         print("Have atleast 1 character in your password.")
         val = False
