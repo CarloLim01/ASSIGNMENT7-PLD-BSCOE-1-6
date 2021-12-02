@@ -9,3 +9,11 @@
 #Ouput: Valid
 
 password = input("Enter your password: ")
+
+def password_validator():
+    special_character = ("!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", ".", "|", ";", ":", "'", "?", ",", "/", "<", ">", "~", "`")
+    val = True
+    if not any(char in special_character for char in password):
+        print("Have atleast 1 character in your password.")
+        val = False
+    return val
